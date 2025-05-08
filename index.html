@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>My Personal Dashboard</h1>
+            <p id="current-time"></p>
+        </header>
+        
+        <div class="dashboard-grid">
+            <!-- Todo App -->
+            <div class="widget" id="todo-widget">
+                <div class="widget-header">
+                    <h2>Todo List</h2>
+                </div>
+                <div class="widget-content">
+                    <div class="todo-input">
+                        <input type="text" id="todo-input" placeholder="Add a new task...">
+                        <button id="add-todo">Add</button>
+                    </div>
+                    <ul id="todo-list"></ul>
+                </div>
+            </div>
+            
+            <!-- Notes App -->
+            <div class="widget" id="notes-widget">
+                <div class="widget-header">
+                    <h2>Notes</h2>
+                </div>
+                <div class="widget-content">
+                    <div class="notes-list" id="notes-list"></div>
+                    <div class="note-editor">
+                        <input type="text" id="note-title" placeholder="Title...">
+                        <textarea id="note-content" placeholder="Write your note here..."></textarea>
+                        <div class="note-actions">
+                            <button id="save-note">Save Note</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Weather Widget (API Example) -->
+            <div class="widget" id="weather-widget">
+                <div class="widget-header">
+                    <h2>Weather</h2>
+                </div>
+                <div class="widget-content">
+                    <div id="weather-display">
+                        <p>Loading weather data...</p>
+                    </div>
+                    <div class="weather-search">
+                        <input type="text" id="location-input" placeholder="Enter city name...">
+                        <button id="search-location">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
